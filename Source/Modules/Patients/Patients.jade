@@ -1,0 +1,38 @@
+include ../../Components/Layout/Layout.jade
+include ../../Components/List/List.jade
+include ../../Components/PanelControls/PanelControls.jade
+
+
+#patients(class="Container")
+	+Layout()
+		+Panel("patients", "west")
+			div(class="panel panel-default" style="width: 100%; height: 100%;")
+				div(class="panel panel-header SearchHeader")
+					input(type="text" class="form-control SearchField" placeholder="Search")
+				div(class="panel panel-body ListBody")
+					+List
+						+ListItem('Adam Smith', 'glyphicon glyphicon-user')
+						+ListItem('Jane Smith', 'glyphicon glyphicon-user')
+						+ListItem('Jason Li', 'glyphicon glyphicon-user')
+				div(class="panel panel-footer PatientsFooter")
+					+ToolBar("patients-toolbar")
+						+Button('add-patient', 'fa fa-plus')
+						+Button('remove-patient', 'glyphicon glyphicon-remove')
+						+Button('edit-patient', 'glyphicon glyphicon-edit')
+												
+		+Panel('information', 'center')
+			div(class="panel panel-default" style="width: 100%; height: 100%;")
+				div(class="panel panel-body")
+			
+		+Panel('toolbar', 'north')
+			div(class="panel panel-default" style="width: 100%; height: 100%;")
+				div(class="panel panel-body")
+			
+		+Panel('notes', 'south')
+			div(class="panel panel-default" style="width: 100%; height: 100%;")
+				div(class="panel panel-body")
+			
+		+Panel('editor', 'east')
+			div(class="panel panel-default" style="width: 100%; height: 100%;")
+				div(class="panel panel-body")
+			

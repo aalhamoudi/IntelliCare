@@ -1,0 +1,11 @@
+mixin Panel(name, position)
+	section(id=name + "Panel", class="ui-layout-" + position)
+		if block
+			block
+	
+	
+mixin Layout()
+	.Layout
+		if block
+			block
+	

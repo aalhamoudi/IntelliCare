@@ -1,0 +1,16 @@
+mixin Module(name, icon)
+	li
+		a.selector
+			span(id=name+'Button', content=name, class=icon, data-toggle="tooltip", data-placement="right", title=name)
+	
+			
+			
+		
+mixin SideNav()
+	aside
+		ul.SideNav
+			if block
+				block
+			else
+				p placeholder
+			

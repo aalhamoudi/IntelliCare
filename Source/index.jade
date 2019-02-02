@@ -1,0 +1,42 @@
+doctype html
+html
+	head
+		title IntelliCare
+		include ./Resources/Styles.jade
+		include ./Resources/Scripts.jade
+	body
+		include ./Components/SideNav/SideNav.jade
+		include ./Components/MainContent/MainContent.jade
+		
+		
+		
+		+SideNav
+			+Module('Menu', 'fa fa-bars')
+			+Module('separator', 'fa fa-ellipsis-h')
+			+Module('Home', 'mega-octicon octicon-home')
+			+Module('Patients', 'glyphicon glyphicon-user')
+			+Module('Diagnostics', 'fa fa-user-md')
+			+Module('Tools', 'mega-octicon octicon-tools')
+			+Module('Encyclopedia', 'mega-octicon octicon-book')
+			+Module('Papers', 'fa fa-leanpub')
+			
+		+MainContent('Menu')
+			include ./Modules/Menu/Menu.jade
+			
+		+MainContent('Home')
+			include ./Modules/Home/Home.jade
+		
+		+MainContent('Patients')
+			include ./Modules/Patients/Patients.jade
+			
+		+MainContent('Diagnostics')
+			include ./Modules/Diagnostics/Diagnostics.jade
+			
+		+MainContent('Tools')
+			include ./Modules/Tools/Tools.jade
+			
+		+MainContent('Encyclopedia')
+			include ./Modules/Encyclopedia/Encyclopedia.jade
+			
+		+MainContent('Papers')
+			include ./Modules/Papers/Papers.jade
